@@ -1,3 +1,10 @@
+* {
+    margin:0 auto;
+    padding:0;
+    text-align: center;
+}
+
+
 .logo1, .logo2 {
     height: 3.5rem;
     background-color: #212529;
@@ -10,26 +17,24 @@
 }
 
 .menu {
-    background-color: #343a40;
     height: 3.5rem;
+    background-color: #1862ab;
+    
 }
 
-.menu-item {
+
+
+.menu div{
     display: inline-block;
     color: white;
     font-size: 1rem;
     line-height: 3.5rem;
     width: 25%;
     text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s;
     text-decoration: none;
 }
 
-.menu-item:hover {
-    background-color: #495057;
-}
 
-.menu-item:active, .menu-item.active {
-    background-color: #1862ab;
+#content {
+    margin-top: 50px;
 }

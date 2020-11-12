@@ -2,19 +2,12 @@ import React from 'react'
 import './main.css';
 import { BrowserRouter,Link,Route} from 'react-router-dom';
 
+
 import Home from 'neyong/Home';
 import WinLose from 'neyong/WinLose';
 import FindChamp from 'neyong/FindChamp';
 import Stat from 'neyong/Stat';
 
-
-const MenuItem = ({active, children, to}) => (
-    <div className='menu-item'>
-
-        {children}
-
-    </div>
-)
 
 const Main = () => {
     return(
@@ -27,10 +20,10 @@ const Main = () => {
                     WhosTheWinner
                 </div>
                 <div className="menu">
-                    <MenuItem><Link to="home">Home</Link></MenuItem>
-                    <MenuItem><Link to="winlose">승률계산</Link></MenuItem>
-                    <MenuItem><Link to="findchamp">챔프별 블루/레드 승률</Link></MenuItem>
-                    <MenuItem><Link to="stat">전적</Link></MenuItem>
+                    <Link to="home"><div>Home</div></Link>
+                    <Link to="winlose"><div>승률계산</div></Link>
+                    <Link to="findchamp"><div>챔프별 블루/레드 승률</div></Link>
+                    <Link to="stat"><div>전적</div></Link>
                 </div>
 
 

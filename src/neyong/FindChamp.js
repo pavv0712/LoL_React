@@ -1,11 +1,11 @@
 import React from 'react';
-import Welcome from '../pages/Welcome'
+import 'pages/main.css'
 
 
 const FindChamp = () => {
     return(
         <div>
-            <Welcome>챔프검색</Welcome>
+            챔프검색
         </div>
     );
 };

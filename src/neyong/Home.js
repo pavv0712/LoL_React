@@ -1,10 +1,12 @@
 import React from 'react';
-import Welcome from '../pages/Welcome'
+// import Welcome from '../pages/Welcome'
+import 'pages/main.css'
 
 const Home = () => {
     return(
-        <div>
-            <Welcome>어서오세요 소환사님</Welcome>
+        <div className='seungsan'>
+                <h1>WhosTherWinner에 오신걸 환영합니다!</h1>
+                <h3>소환사님 이번게임의 승산을 알아보세요!</h3>
         </div>
     );
 };
