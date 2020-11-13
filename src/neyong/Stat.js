@@ -56,3 +56,4 @@ const submit_data = () =>{
 };
 
 export default Stat;
+
