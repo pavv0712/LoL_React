@@ -1,0 +1,914 @@
+[
+	{
+		"name": "Rumble",
+		"position": "Top, Mid",
+		"Blue": "55.0%",
+		"Red": "47.2%"
+	},
+	{
+		"name": "Sivir",
+		"position": "AD Carry",
+		"Blue": "51.6%",
+		"Red": "43.8%"
+	},
+	{
+		"name": "Karthus",
+		"position": "Jungler",
+		"Blue": "36.8%",
+		"Red": "44.5%"
+	},
+	{
+		"name": "Varus",
+		"position": "AD Carry",
+		"Blue": "40.4%",
+		"Red": "47.4%"
+	},
+	{
+		"name": "Kennen",
+		"position": "Top",
+		"Blue": "45.6%",
+		"Red": "51.8%"
+	},
+	{
+		"name": "Neeko",
+		"position": "Mid, Support",
+		"Blue": "48.0%",
+		"Red": "53.8%"
+	},
+	{
+		"name": "Gangplank",
+		"position": "Top",
+		"Blue": "40.6%",
+		"Red": "45.6%"
+	},
+	{
+		"name": "Aatrox",
+		"position": "Top",
+		"Blue": "51.2%",
+		"Red": "46.3%"
+	},
+	{
+		"name": "Anivia",
+		"position": "Mid",
+		"Blue": "42.1%",
+		"Red": "46.6%"
+	},
+	{
+		"name": "Corki",
+		"position": "Mid",
+		"Blue": "42.6%",
+		"Red": "47.1%"
+	},
+	{
+		"name": "Trundle",
+		"position": "Jungler, Top",
+		"Blue": "47.2%",
+		"Red": "42.8%"
+	},
+	{
+		"name": "Zyra",
+		"position": "Support",
+		"Blue": "49.5%",
+		"Red": "53.8%"
+	},
+	{
+		"name": "Riven",
+		"position": "Top",
+		"Blue": "45.3%",
+		"Red": "49.5%"
+	},
+	{
+		"name": "Sion",
+		"position": "Top",
+		"Blue": "49.4%",
+		"Red": "53.5%"
+	},
+	{
+		"name": "Swain",
+		"position": "Support",
+		"Blue": "52.4%",
+		"Red": "48.4%"
+	},
+	{
+		"name": "Evelynn",
+		"position": "Jungler",
+		"Blue": "44.9%",
+		"Red": "48.7%"
+	},
+	{
+		"name": "Ziggs",
+		"position": "Mid",
+		"Blue": "51.6%",
+		"Red": "47.8%"
+	},
+	{
+		"name": "Nidalee",
+		"position": "Jungler",
+		"Blue": "41.9%",
+		"Red": "45.5%"
+	},
+	{
+		"name": "Vladimir",
+		"position": "Mid, Top",
+		"Blue": "47.5%",
+		"Red": "51.2%"
+	},
+	{
+		"name": "Heimerdinger",
+		"position": "Mid, Top",
+		"Blue": "47.2%",
+		"Red": "50.8%"
+	},
+	{
+		"name": "Warwick",
+		"position": "Jungler",
+		"Blue": "43.1%",
+		"Red": "46.6%"
+	},
+	{
+		"name": "Nasus",
+		"position": "Top",
+		"Blue": "46.8%",
+		"Red": "50.3%"
+	},
+	{
+		"name": "Sona",
+		"position": "Support",
+		"Blue": "52.9%",
+		"Red": "49.4%"
+	},
+	{
+		"name": "Annie",
+		"position": "Mid, Support",
+		"Blue": "49.9%",
+		"Red": "53.3%"
+	},
+	{
+		"name": "Fiddlesticks",
+		"position": "Jungler",
+		"Blue": "49.1%",
+		"Red": "52.4%"
+	},
+	{
+		"name": "Veigar",
+		"position": "Mid",
+		"Blue": "46.9%",
+		"Red": "50.2%"
+	},
+	{
+		"name": "Rengar",
+		"position": "Jungler, Top",
+		"Blue": "45.8%",
+		"Red": "42.5%"
+	},
+	{
+		"name": "Taric",
+		"position": "Support",
+		"Blue": "49.0%",
+		"Red": "52.2%"
+	},
+	{
+		"name": "Nocturne",
+		"position": "Jungler",
+		"Blue": "48.3%",
+		"Red": "45.2%"
+	},
+	{
+		"name": "Malphite",
+		"position": "Top, Support",
+		"Blue": "54.7%",
+		"Red": "57.8%"
+	},
+	{
+		"name": "Jarvan IV",
+		"position": "Jungler",
+		"Blue": "47.9%",
+		"Red": "50.9%"
+	},
+	{
+		"name": "Katarina",
+		"position": "Mid",
+		"Blue": "50.4%",
+		"Red": "47.4%"
+	},
+	{
+		"name": "Sylas",
+		"position": "Mid, Top",
+		"Blue": "45.5%",
+		"Red": "48.5%"
+	},
+	{
+		"name": "Lulu",
+		"position": "Support",
+		"Blue": "49.0%",
+		"Red": "51.9%"
+	},
+	{
+		"name": "Malzahar",
+		"position": "Mid",
+		"Blue": "53.5%",
+		"Red": "50.6%"
+	},
+	{
+		"name": "Xayah",
+		"position": "AD Carry",
+		"Blue": "48.3%",
+		"Red": "45.4%"
+	},
+	{
+		"name": "Janna",
+		"position": "Support",
+		"Blue": "52.6%",
+		"Red": "49.8%"
+	},
+	{
+		"name": "Yasuo",
+		"position": "Mid",
+		"Blue": "47.0%",
+		"Red": "49.8%"
+	},
+	{
+		"name": "Garen",
+		"position": "Top",
+		"Blue": "49.1%",
+		"Red": "46.3%"
+	},
+	{
+		"name": "Kalista",
+		"position": "AD Carry",
+		"Blue": "45.1%",
+		"Red": "47.9%"
+	},
+	{
+		"name": "Tahm Kench",
+		"position": "Top, Support",
+		"Blue": "50.0%",
+		"Red": "47.3%"
+	},
+	{
+		"name": "Thresh",
+		"position": "Support",
+		"Blue": "48.9%",
+		"Red": "51.6%"
+	},
+	{
+		"name": "Ryze",
+		"position": "Mid, Top",
+		"Blue": "41.1%",
+		"Red": "43.8%"
+	},
+	{
+		"name": "Quinn",
+		"position": "Top",
+		"Blue": "53.1%",
+		"Red": "50.5%"
+	},
+	{
+		"name": "Shyvana",
+		"position": "Jungler",
+		"Blue": "46.1%",
+		"Red": "48.6%"
+	},
+	{
+		"name": "Wukong",
+		"position": "Top, Jungler",
+		"Blue": "50.7%",
+		"Red": "53.1%"
+	},
+	{
+		"name": "Azir",
+		"position": "Mid",
+		"Blue": "45.5%",
+		"Red": "43.2%"
+	},
+	{
+		"name": "Kled",
+		"position": "Top",
+		"Blue": "48.1%",
+		"Red": "50.4%"
+	},
+	{
+		"name": "Rakan",
+		"position": "Support",
+		"Blue": "49.4%",
+		"Red": "51.6%"
+	},
+	{
+		"name": "Gnar",
+		"position": "Top",
+		"Blue": "53.6%",
+		"Red": "51.4%"
+	},
+	{
+		"name": "Zilean",
+		"position": "Support",
+		"Blue": "48.7%",
+		"Red": "50.9%"
+	},
+	{
+		"name": "Jinx",
+		"position": "AD Carry",
+		"Blue": "49.5%",
+		"Red": "51.7%"
+	},
+	{
+		"name": "Urgot",
+		"position": "Top",
+		"Blue": "51.0%",
+		"Red": "49.0%"
+	},
+	{
+		"name": "Nautilus",
+		"position": "Support",
+		"Blue": "51.1%",
+		"Red": "53.1%"
+	},
+	{
+		"name": "Draven",
+		"position": "AD Carry",
+		"Blue": "49.7%",
+		"Red": "51.8%"
+	},
+	{
+		"name": "Kha'Zix",
+		"position": "Jungler",
+		"Blue": "52.4%",
+		"Red": "54.4%"
+	},
+	{
+		"name": "Amumu",
+		"position": "Jungler",
+		"Blue": "60.2%",
+		"Red": "58.2%"
+	},
+	{
+		"name": "Yone",
+		"position": "Mid, Top",
+		"Blue": "47.1%",
+		"Red": "45.1%"
+	},
+	{
+		"name": "Hecarim",
+		"position": "Jungler",
+		"Blue": "55.5%",
+		"Red": "53.5%"
+	},
+	{
+		"name": "Morgana",
+		"position": "Support",
+		"Blue": "50.1%",
+		"Red": "52.1%"
+	},
+	{
+		"name": "Sett",
+		"position": "Top, Support",
+		"Blue": "48.8%",
+		"Red": "46.8%"
+	},
+	{
+		"name": "Lucian",
+		"position": "AD Carry, Mid",
+		"Blue": "45.0%",
+		"Red": "47.0%"
+	},
+	{
+		"name": "Blitzcrank",
+		"position": "Support",
+		"Blue": "48.0%",
+		"Red": "49.9%"
+	},
+	{
+		"name": "Aphelios",
+		"position": "AD Carry",
+		"Blue": "45.1%",
+		"Red": "47.0%"
+	},
+	{
+		"name": "Zed",
+		"position": "Mid",
+		"Blue": "50.0%",
+		"Red": "51.8%"
+	},
+	{
+		"name": "Seraphine",
+		"position": "Support",
+		"Blue": "48.9%",
+		"Red": "50.6%"
+	},
+	{
+		"name": "Elise",
+		"position": "Jungler",
+		"Blue": "49.6%",
+		"Red": "51.3%"
+	},
+	{
+		"name": "Twisted Fate",
+		"position": "Mid",
+		"Blue": "45.8%",
+		"Red": "47.4%"
+	},
+	{
+		"name": "Ahri",
+		"position": "Mid",
+		"Blue": "48.7%",
+		"Red": "50.3%"
+	},
+	{
+		"name": "Nami",
+		"position": "Support",
+		"Blue": "53.8%",
+		"Red": "52.3%"
+	},
+	{
+		"name": "Soraka",
+		"position": "Support",
+		"Blue": "49.3%",
+		"Red": "47.7%"
+	},
+	{
+		"name": "Caitlyn",
+		"position": "AD Carry",
+		"Blue": "46.7%",
+		"Red": "48.3%"
+	},
+	{
+		"name": "Gragas",
+		"position": "Jungler",
+		"Blue": "44.5%",
+		"Red": "46.1%"
+	},
+	{
+		"name": "Taliyah",
+		"position": "Jungler, Mid",
+		"Blue": "44.5%",
+		"Red": "46.1%"
+	},
+	{
+		"name": "Twitch",
+		"position": "AD Carry",
+		"Blue": "45.8%",
+		"Red": "44.3%"
+	},
+	{
+		"name": "Yorick",
+		"position": "Top",
+		"Blue": "48.6%",
+		"Red": "47.1%"
+	},
+	{
+		"name": "Samira",
+		"position": "AD Carry",
+		"Blue": "52.0%",
+		"Red": "53.5%"
+	},
+	{
+		"name": "Poppy",
+		"position": "Top",
+		"Blue": "53.8%",
+		"Red": "52.4%"
+	},
+	{
+		"name": "Talon",
+		"position": "Mid",
+		"Blue": "49.2%",
+		"Red": "47.8%"
+	},
+	{
+		"name": "Vel'Koz",
+		"position": "Support, Mid",
+		"Blue": "49.5%",
+		"Red": "50.8%"
+	},
+	{
+		"name": "Mordekaiser",
+		"position": "Top",
+		"Blue": "49.3%",
+		"Red": "47.9%"
+	},
+	{
+		"name": "Volibear",
+		"position": "Jungler, Top",
+		"Blue": "49.0%",
+		"Red": "50.4%"
+	},
+	{
+		"name": "Yuumi",
+		"position": "Support",
+		"Blue": "47.4%",
+		"Red": "48.7%"
+	},
+	{
+		"name": "Xerath",
+		"position": "Support, Mid",
+		"Blue": "51.2%",
+		"Red": "52.4%"
+	},
+	{
+		"name": "Qiyana",
+		"position": "Mid",
+		"Blue": "44.9%",
+		"Red": "43.7%"
+	},
+	{
+		"name": "Kayle",
+		"position": "Top",
+		"Blue": "54.7%",
+		"Red": "55.9%"
+	},
+	{
+		"name": "Ashe",
+		"position": "AD Carry",
+		"Blue": "51.1%",
+		"Red": "52.3%"
+	},
+	{
+		"name": "Irelia",
+		"position": "Top, Mid",
+		"Blue": "43.2%",
+		"Red": "44.4%"
+	},
+	{
+		"name": "Jax",
+		"position": "Top, Jungler",
+		"Blue": "49.2%",
+		"Red": "50.3%"
+	},
+	{
+		"name": "Kindred",
+		"position": "Jungler",
+		"Blue": "45.3%",
+		"Red": "44.3%"
+	},
+	{
+		"name": "Fizz",
+		"position": "Mid",
+		"Blue": "56.5%",
+		"Red": "57.5%"
+	},
+	{
+		"name": "Alistar",
+		"position": "Support",
+		"Blue": "51.5%",
+		"Red": "50.5%"
+	},
+	{
+		"name": "Dr. Mundo",
+		"position": "Top, Jungler",
+		"Blue": "50.5%",
+		"Red": "51.5%"
+	},
+	{
+		"name": "Rek'Sai",
+		"position": "Jungler",
+		"Blue": "47.8%",
+		"Red": "48.8%"
+	},
+	{
+		"name": "Senna",
+		"position": "Support, AD Carry",
+		"Blue": "47.3%",
+		"Red": "48.3%"
+	},
+	{
+		"name": "Kog'Maw",
+		"position": "AD Carry",
+		"Blue": "48.1%",
+		"Red": "49.0%"
+	},
+	{
+		"name": "Camille",
+		"position": "Top",
+		"Blue": "50.3%",
+		"Red": "51.2%"
+	},
+	{
+		"name": "Leona",
+		"position": "Support",
+		"Blue": "51.9%",
+		"Red": "50.9%"
+	},
+	{
+		"name": "Miss Fortune",
+		"position": "AD Carry",
+		"Blue": "51.6%",
+		"Red": "50.6%"
+	},
+	{
+		"name": "Cho'Gath",
+		"position": "Top",
+		"Blue": "53.5%",
+		"Red": "54.4%"
+	},
+	{
+		"name": "Rammus",
+		"position": "Jungler",
+		"Blue": "54.2%",
+		"Red": "55.2%"
+	},
+	{
+		"name": "Zoe",
+		"position": "Mid",
+		"Blue": "48.9%",
+		"Red": "49.8%"
+	},
+	{
+		"name": "Ekko",
+		"position": "Mid, Jungler",
+		"Blue": "52.5%",
+		"Red": "51.5%"
+	},
+	{
+		"name": "Syndra",
+		"position": "Mid",
+		"Blue": "46.7%",
+		"Red": "47.6%"
+	},
+	{
+		"name": "Tryndamere",
+		"position": "Top",
+		"Blue": "43.0%",
+		"Red": "42.2%"
+	},
+	{
+		"name": "Viktor",
+		"position": "Mid",
+		"Blue": "52.0%",
+		"Red": "52.8%"
+	},
+	{
+		"name": "Braum",
+		"position": "Support",
+		"Blue": "53.0%",
+		"Red": "52.2%"
+	},
+	{
+		"name": "Singed",
+		"position": "Top",
+		"Blue": "46.9%",
+		"Red": "47.8%"
+	},
+	{
+		"name": "Kai'Sa",
+		"position": "AD Carry",
+		"Blue": "49.6%",
+		"Red": "48.8%"
+	},
+	{
+		"name": "Diana",
+		"position": "Mid",
+		"Blue": "50.7%",
+		"Red": "49.9%"
+	},
+	{
+		"name": "Fiora",
+		"position": "Top",
+		"Blue": "49.8%",
+		"Red": "49.0%"
+	},
+	{
+		"name": "Lee Sin",
+		"position": "Jungler",
+		"Blue": "42.0%",
+		"Red": "42.8%"
+	},
+	{
+		"name": "Karma",
+		"position": "Support",
+		"Blue": "47.3%",
+		"Red": "48.0%"
+	},
+	{
+		"name": "Ezreal",
+		"position": "AD Carry",
+		"Blue": "46.9%",
+		"Red": "46.1%"
+	},
+	{
+		"name": "Brand",
+		"position": "Support",
+		"Blue": "51.3%",
+		"Red": "50.5%"
+	},
+	{
+		"name": "Lux",
+		"position": "Support, Mid",
+		"Blue": "49.5%",
+		"Red": "50.2%"
+	},
+	{
+		"name": "Ivern",
+		"position": "Jungler",
+		"Blue": "48.7%",
+		"Red": "48.0%"
+	},
+	{
+		"name": "Galio",
+		"position": "Mid, Support",
+		"Blue": "53.6%",
+		"Red": "52.9%"
+	},
+	{
+		"name": "Teemo",
+		"position": "Top",
+		"Blue": "50.4%",
+		"Red": "49.8%"
+	},
+	{
+		"name": "Zac",
+		"position": "Jungler",
+		"Blue": "52.8%",
+		"Red": "53.4%"
+	},
+	{
+		"name": "Ornn",
+		"position": "Top",
+		"Blue": "51.6%",
+		"Red": "51.0%"
+	},
+	{
+		"name": "Cassiopeia",
+		"position": "Mid",
+		"Blue": "46.0%",
+		"Red": "45.4%"
+	},
+	{
+		"name": "Vayne",
+		"position": "AD Carry",
+		"Blue": "52.0%",
+		"Red": "51.5%"
+	},
+	{
+		"name": "Kayn",
+		"position": "Jungler",
+		"Blue": "52.2%",
+		"Red": "51.7%"
+	},
+	{
+		"name": "Renekton",
+		"position": "Top",
+		"Blue": "47.3%",
+		"Red": "47.8%"
+	},
+	{
+		"name": "Sejuani",
+		"position": "Jungler",
+		"Blue": "51.0%",
+		"Red": "51.5%"
+	},
+	{
+		"name": "Vi",
+		"position": "Jungler",
+		"Blue": "52.7%",
+		"Red": "52.3%"
+	},
+	{
+		"name": "Kassadin",
+		"position": "Mid",
+		"Blue": "46.2%",
+		"Red": "46.6%"
+	},
+	{
+		"name": "Akali",
+		"position": "Mid, Top",
+		"Blue": "49.3%",
+		"Red": "49.7%"
+	},
+	{
+		"name": "Jhin",
+		"position": "AD Carry",
+		"Blue": "52.5%",
+		"Red": "52.9%"
+	},
+	{
+		"name": "Master Yi",
+		"position": "Jungler",
+		"Blue": "48.4%",
+		"Red": "48.0%"
+	},
+	{
+		"name": "Bard",
+		"position": "Support",
+		"Blue": "51.4%",
+		"Red": "51.1%"
+	},
+	{
+		"name": "Lissandra",
+		"position": "Mid",
+		"Blue": "51.3%",
+		"Red": "51.6%"
+	},
+	{
+		"name": "Illaoi",
+		"position": "Top",
+		"Blue": "48.7%",
+		"Red": "49.0%"
+	},
+	{
+		"name": "Orianna",
+		"position": "Mid",
+		"Blue": "47.4%",
+		"Red": "47.8%"
+	},
+	{
+		"name": "Maokai",
+		"position": "Top, Support",
+		"Blue": "52.2%",
+		"Red": "52.5%"
+	},
+	{
+		"name": "Olaf",
+		"position": "Jungler, Top",
+		"Blue": "46.7%",
+		"Red": "47.0%"
+	},
+	{
+		"name": "Tristana",
+		"position": "AD Carry",
+		"Blue": "50.0%",
+		"Red": "50.3%"
+	},
+	{
+		"name": "Xin Zhao",
+		"position": "Jungler",
+		"Blue": "50.1%",
+		"Red": "50.3%"
+	},
+	{
+		"name": "Pantheon",
+		"position": "Support",
+		"Blue": "48.9%",
+		"Red": "48.6%"
+	},
+	{
+		"name": "Darius",
+		"position": "Top",
+		"Blue": "48.9%",
+		"Red": "49.1%"
+	},
+	{
+		"name": "Jayce",
+		"position": "Top, Mid",
+		"Blue": "49.8%",
+		"Red": "49.7%"
+	},
+	{
+		"name": "Nunu & Willump",
+		"position": "Jungler",
+		"Blue": "57.1%",
+		"Red": "57.2%"
+	},
+	{
+		"name": "LeBlanc",
+		"position": "Mid",
+		"Blue": "50.8%",
+		"Red": "50.7%"
+	},
+	{
+		"name": "Shen",
+		"position": "Top",
+		"Blue": "53.5%",
+		"Red": "53.4%"
+	},
+	{
+		"name": "Aurelion Sol",
+		"position": "Mid",
+		"Blue": "50.6%",
+		"Red": "50.7%"
+	},
+	{
+		"name": "Pyke",
+		"position": "Support",
+		"Blue": "49.7%",
+		"Red": "49.6%"
+	},
+	{
+		"name": "Lillia",
+		"position": "Jungler",
+		"Blue": "46.9%",
+		"Red": "46.8%"
+	},
+	{
+		"name": "Udyr",
+		"position": "Jungler",
+		"Blue": "48.8%",
+		"Red": "48.8%"
+	},
+	{
+		"name": "Shaco",
+		"position": "Jungler",
+		"Blue": "48.3%",
+		"Red": "48.3%"
+	},
+	{
+		"name": "Skarner",
+		"position": "Jungler",
+		"Blue": "54.6%",
+		"Red": "54.6%"
+	},
+	{
+		"name": "Graves",
+		"position": "Jungler",
+		"Blue": "50.2%",
+		"Red": "50.2%"
+	}
+]

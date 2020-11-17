@@ -1,8 +1,7 @@
 import React from 'react';
-// import Welcome from '../pages/Welcome'
 import 'pages/main.css'
 
-const Home = () => {
+function Home(){
     return(
         <div className='seungsan'>
                 <h1>WhosTherWinner에 오신걸 환영합니다!</h1>
