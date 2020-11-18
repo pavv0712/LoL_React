@@ -1,17 +1,13 @@
 import React from 'react';
+import 'pages/main.css';
 
 
 const WinLose = () => {
     return(
         <div className='row'>
-            <div style = {{"height":"30px;"}}></div>
-            <table className={"table"}></table>
-                <tr>
-                    <td>
-                        <input type={"text"} className={"input-sm"} size={"25"}/>
-            
-                    </td>
-                </tr>
+           <h2>소환사 이름으로 챔피언별 전적 검색</h2>
+            <input type="text" name="username" />
+            <input type="button" value="제출" />
             
         </div>
     );

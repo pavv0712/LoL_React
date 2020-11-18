@@ -4,8 +4,7 @@ import 'pages/main.css';
 import BlueRed from './BlueRed.json';
 
 function FindChamp(){
-    // console.log('BlueRed:', typeof BlueRed);
-    // console.log(BlueRed)
+
     const [champ, setChamp] = React.useState('')
     
     const changeName = (e) =>{ //이름 지정
@@ -20,7 +19,7 @@ function FindChamp(){
 
         <div>
             <h2>챔피언별 블루/레드 승률</h2>
-            <input type="text" name="champ" onChange={changeName} />
+            <input type="text" name="champ" onChange={changeName} size={"25"} />
             <input type="button" value="검색" onClick={submit_data}/>
             {
                 BlueRed.map((v) => {

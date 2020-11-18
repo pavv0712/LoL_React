@@ -1,6 +1,7 @@
 import React from 'react';
 // import BrowserRouter from 'react-router-dom';
 import Axios from 'axios';
+import 'pages/main.css';
 
 
 const GetURL = 'http://localhost:5000/'
@@ -33,12 +34,15 @@ const submit_data = () =>{
             <input type="text" name="username" onChange={changeName} />
             <input type="button" value="제출" onClick={submit_data}/>
             <br/>
-            <span>출력 결과 </span>
+            
             <div style={{'width':'400px', 'height':'500px'}}>
             <table className="res-table">
             <thead>
                 <tr>
-                    <th>챔피언명</th><th>승리</th><th>패배</th><th>승률</th>
+                    <th>챔피언명</th>
+                    <th>승리</th>
+                    <th>패배</th>
+                    <th>승률</th>
                 </tr>
             </thead>
             {Object.keys(result).map(v => {
