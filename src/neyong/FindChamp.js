@@ -5,37 +5,44 @@ import BlueRed from './BlueRed.json';
 
 function FindChamp(){
 
-    const [champ, setChamp] = React.useState('')
-    
-    const changeName = (e) =>{ //이름 지정
-        setChamp(e.target.value);
-    }
-    const submit_data = () =>{
-
-    }
-
 
     return(
 
         <div>
-            <h2>챔피언별 블루/레드 승률</h2>
-            <input type="text" name="champ" onChange={changeName} size={"25"} />
-            <input type="button" value="검색" onClick={submit_data}/>
-            {
-                BlueRed.map((v) => {
-                    return <div>
-                        <table>
-                            <tr>
-                                <td>{v.name}</td> 
+            <h2>챔피언 승률차</h2>
+            <input type="text" name="champ"  size={"25"} />
+            <input type="button" value="검색"/>
+                <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>이름</th>
+                            <th>포지션</th>
+                            <th colSpan='2'>블루</th>
+                            <th>레드</th>
+                        </tr>
+                    </thead>
+                    {BlueRed.map((v) => {
+                        return (
+                            <tr>       
+                                <td>{v.name}</td>
                                 <td>{v.position}</td>
-                                <td>{v.Blue}</td>
-                                <td>{v.Red}</td>
+                                <td>
+                                    <progress className='blue' value={v.Blue} max='100'/>
+                                </td>
+                                
+                                <td>{v.Blue}%</td>
+                                <td>
+                                    <progress className='red' value={v.Red} max='100'/>
+                                </td>
+                                
+                                <td>{v.Red}%</td>
                             </tr>
-                        </table>
-                        </div>
-                })
-            }
+                        )})}
+                </table>
+                </div>
         </div>
+                    
     );
 };
 

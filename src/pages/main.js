@@ -1,7 +1,7 @@
 import React from 'react'
 import './main.css';
 import { BrowserRouter,Link,Route} from 'react-router-dom';
-import earth from 'images/earth.png'
+
 
 import Home from 'neyong/Home';
 import WinLose from 'neyong/WinLose';
@@ -15,15 +15,15 @@ const Main = () => {
             <header>    
                 <div id ='logo'>
                     <a href = '/' alt='logo'>
-                        WhosTheWinner
+                        WhosTheWinner League of Leagends
                     </a>
                 </div>
-                
+
                 <div id = "menu">
-                    <Link to="/"><div>Home | </div></Link>
-                    <Link to="winlose"><div>| 승률계산 |</div></Link>
-                    <Link to="findchamp"><div>| 챔피언별 블루/레드 승률 |</div></Link>
-                    <Link to="stat"><div>| 소환사 챔피언별 승률</div></Link>
+                    <Link to="/" className='menu1'><div>Home | </div></Link>
+                    <Link to="winlose" className='menu2'><div>| 승률계산 |</div></Link>
+                    <Link to="findchamp" className='menu3'><div>| 챔피언별 블루/레드 승률 |</div></Link>
+                    <Link to="stat" className='menu4'><div>| 소환사 챔피언별 승률</div></Link>
                 </div>
             
             </header>

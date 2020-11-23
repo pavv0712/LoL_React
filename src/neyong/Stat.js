@@ -4,7 +4,7 @@ import Axios from 'axios';
 import 'pages/main.css';
 
 
-const GetURL = 'http://localhost:5000/'
+const GetURL = 'http://localhost:5000'
 
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import 'pages/main.css'
-import magician from 'images/magician.jpg'
+import magician from 'images/species-removebg-preview.png'
 
 
 

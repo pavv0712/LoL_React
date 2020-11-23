@@ -4,6 +4,13 @@
     
 }
 
+body {
+    background-image: url("images/magician.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
 header{
     background-color: #212529;
     height: 95px;;
@@ -13,8 +20,9 @@ header{
 
 #logo {
     position: absolute;
-    top:30px;
+    top:25px;
     left:30px;
+    font-size: 30px;
 }
 #logo a{
     color:white;
@@ -28,10 +36,15 @@ header{
     
 }
 
+menu-item:active{
+    background-color: #1862ab;
+}
+
 #menu div{
     display: inline-block;
     color:white;
     text-decoration: none;
+    
 }
 
 #content {
@@ -41,3 +54,30 @@ header{
     
 }
 
+#menu .menu1:active{
+    transition: background-color 0.3s;
+    background-color: rgb(159, 158, 165);
+}
+
+#content {
+    color:white;
+}
+
+.blue[value]{
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.blue[value]::-webkit-progress-value {
+    background-color: rgb(59, 59, 226);
+  }
+
+
+.red[value]{
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.red[value]::-webkit-progress-value {
+    background-color: rgb(218, 45, 45);
+  }
