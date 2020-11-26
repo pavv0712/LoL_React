@@ -5,19 +5,9 @@ import BlueRed from './BlueRed.json';
 
 function FindChamp(){
 
-    React.useEffect(() => {
-        Axios.get('http://lolg-cdn.porofessor.gg/img/champion-icons/10.23/64/68.png')
-        .then(response => {
-            console.log(response);
-        }).catch(error => {
-            console.error(error);
-        })
-    },[])
-
-
     return(
 
-        <div>
+        <div className='bluered'>
             <h2>챔피언 승률차</h2>
                 <table className='rate'>
                     <thead>
