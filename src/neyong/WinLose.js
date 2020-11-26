@@ -2,7 +2,7 @@ import React from 'react';
 import 'pages/main.css';
 
 
-const WinLose = () => {
+function WinLose(){
     return(
         <div className='Winlose'>
            <h2>승률계산</h2>

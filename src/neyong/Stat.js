@@ -1,12 +1,12 @@
 import React from 'react';
 import Axios from 'axios';
-import {Tabs, Input, Button, Table, AutoComplete } from 'antd';
+import {Button, Table, AutoComplete } from 'antd';
 import 'antd/dist/antd.css';
 import 'pages/main.css'
-import {ChampData, array_id, array_en, array_kr, array_en_simple, array_kr_simple} from './ChampData.jsx';
+import {ChampData,array_en, array_kr, array_en_simple, array_kr_simple} from './ChampData.jsx';
 import {LinkOutlined} from '@ant-design/icons';
 
-const GetURL = 'http://localhost:5000'
+const GetURL = 'http://localhost:5000/'
 
 function Stat(){
 
@@ -22,7 +22,7 @@ function Stat(){
     const submit_data = () =>{
         var timerec = new Date().getTime(); //시간 추가
         setTableData([{key:0, champion:'데이터 로딩중'}]);
-
+        console.log(GetURL+'user/'+value);
         Axios.get(GetURL+'user/'+value)
         .then(res =>{ 
             const { data } = res;
@@ -43,7 +43,7 @@ function Stat(){
             setTableData([])
             console.log('조회시간', (new Date().getTime()-timerec)/1000);
         })
-        .catch(error => console.log(error))
+        .catch(error => console.log(1, error))
     }
 
     function champ_name_link(text) { 
@@ -92,7 +92,7 @@ function Stat(){
         <br/>
         <h3>출력 결과 </h3>
         <div style={{'width':'480px', 'height':'400px', 'overflow':'auto'}}>
-        <Table onChange={setTableData} columns={table_columns} dataSource={table_data?table_data:[]} pagination={{pageSize:5, padding:'20px', size:'small'}} style={{'width':'400px'}}/>
+        <Table onChange={submit_data} columns={table_columns} dataSource={table_data?table_data:[]} pagination={{pageSize:5, padding:'20px', size:'small'}} style={{'width':'400px'}}/>
         
         </div> 
 

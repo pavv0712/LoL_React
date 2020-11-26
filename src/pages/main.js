@@ -3,28 +3,16 @@ import './main.css';
 import { BrowserRouter,Link,Route} from 'react-router-dom';
 
 
+
 import Home from 'neyong/Home';
 import WinLose from 'neyong/WinLose';
 import FindChamp from 'neyong/FindChamp';
 import Stat from 'neyong/Stat';
 
 
-const menus = 
-document.getElementsByClassName('menus');
-    for(var i = 0; i < menus.length; i++)
-    {
-        menus[i].addEventListener('click',
-        function(){
-            for (var j = 0; j < menus.length;j++)
-            {
-                menus[j].getElementsByClassName.color = 'grey';
-            }
-            this.style.color = 'white'
-        })
-    }
 
-const Main = () => {
-    
+
+function Main() {
    
     return(
         <BrowserRouter>
@@ -35,11 +23,14 @@ const Main = () => {
                     </a>
                 </div>
                 
-                <div className = "menu">
-                    <Link to="/"><div className='menus'>Home | </div></Link>
-                    <Link to="winlose"><div className='menus'>| 승률계산 |</div></Link>
-                    <Link to="findchamp"><div className='menus'>| 챔피언별 블루/레드 승률 |</div></Link>
-                    <Link to="stat"><div className='menus'>| 소환사 챔피언별 승률</div></Link>
+                <div className = "menus">
+                    <Link to="/" className='menu'>Home</Link>
+                    
+                    <Link to="winlose" className='menu'>승률계산</Link>
+                    
+                    <Link to="findchamp" className='menu'>챔피언별 블루/레드 승률</Link>
+                    
+                    <Link to="stat" className='menu'>소환사 챔피언별 승률</Link>
                 </div>
             
             </header>
@@ -51,10 +42,16 @@ const Main = () => {
                     <Route path='/stat' component={Stat}/>
                     
             </div>
+            <div class='footer'>
+                <div>Copyright C 2020 by MaSuTer | All rights reserved</div>
+
+            </div>
             
      
         </BrowserRouter>
     );
 }
+
+
 
 export default Main
