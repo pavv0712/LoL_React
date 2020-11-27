@@ -47,10 +47,10 @@ header{
 }
 
 .menu:hover{
-    color:#495057;    
+    color:#495057;     
 }
 
-.menu:active{
+.menu:active, .menu.active{
     color:#1862ab;
 }
 

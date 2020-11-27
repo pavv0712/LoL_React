@@ -13,6 +13,12 @@ import Stat from 'neyong/Stat';
 
 
 function Main() {
+
+    const [select, setSelect] = React.useState(['active', '', '', ''])
+    const menus = document.querySelectorAll('.menu')
+    const menuselect = (e) => {
+        setSelect([...menus].map(v => (v===e.target?'active':'')))
+    }
    
     return(
         <BrowserRouter>
@@ -26,13 +32,13 @@ function Main() {
                 </div>
                 
                 <div className = "menus">
-                    <Link to="/" className='menu'>Home</Link>
+                    <Link to="/" className={`menu ${select[0]}`} onClick={menuselect}>Home</Link>
                     
-                    <Link to="winlose" className='menu'>승률계산</Link>
+                    <Link to="winlose" className={`menu ${select[1]}`} onClick={menuselect}>승률계산</Link>
                     
-                    <Link to="findchamp" className='menu'>챔피언별 블루/레드 승률</Link>
+                    <Link to="findchamp" className={`menu ${select[2]}`} onClick={menuselect}>챔피언별 블루/레드 승률</Link>
                     
-                    <Link to="stat" className='menu'>소환사 챔피언별 승률</Link>
+                    <Link to="stat" className={`menu ${select[3]}`} onClick={menuselect}>소환사 챔피언별 승률</Link>
                 </div>
             
             </header>
