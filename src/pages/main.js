@@ -18,8 +18,10 @@ function Main() {
         <BrowserRouter>
             <header>    
                 <div id ='logo'>
-                    <a href = '/' alt='logo'>
-                        WhosTheWinner League of Legends
+                <a href = '/' alt='logo'>
+                        <span id='1'>Whos</span>	            
+                        <span id='2'>The</span>	
+                        <span id='3'>Winner</span>	
                     </a>
                 </div>
                 
