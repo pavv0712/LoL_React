@@ -19,9 +19,7 @@ function Main() {
             <header>    
                 <div id ='logo'>
                     <a href = '/' alt='logo'>
-                        <span id='1'>Whos</span>
-                        <span id='2'>The</span>
-                        <span id='3'>Winner</span>
+                        WhosTheWinner League of Legends
                     </a>
                 </div>
                 
@@ -30,7 +28,7 @@ function Main() {
                     
                     <Link to="winlose" className='menu'>승률계산</Link>
                     
-                    <Link to="findchamp" className='menu'>블루 VS 레드</Link>
+                    <Link to="findchamp" className='menu'>챔피언별 블루/레드 승률</Link>
                     
                     <Link to="stat" className='menu'>소환사 챔피언별 승률</Link>
                 </div>
