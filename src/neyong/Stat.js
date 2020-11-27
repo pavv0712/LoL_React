@@ -5,6 +5,7 @@ import 'antd/dist/antd.css';
 import 'pages/main.css'
 import {ChampData,array_en, array_kr, array_en_simple, array_kr_simple} from './ChampData.jsx';
 import {LinkOutlined} from '@ant-design/icons';
+import summoner from 'images/summoner.png'
 
 const GetURL = 'http://localhost:5000/'
 
@@ -83,17 +84,16 @@ function Stat(){
 
     
     return (<div>
-        <h2>소환사 챔피언별 전적 검색</h2>
-        <h3>참조 : <a href="https://op.gg/champion/"><LinkOutlined/> OP.GG</a> </h3>
-        <div style={{'width':'480px'}}>
-        <AutoComplete value={value} options={userList} placeholder="소환사명" name="username" onChange={changeName} style={{'width':'300px', 'float':'left'}}/>
-        <Button type="button" onClick={submit_data} style={{'width':'96px'}}> 소환사 검색 </Button>
+        <img src={summoner} width='300'/>
+            <h3>참조 : <a href="https://op.gg/champion/"><LinkOutlined/> OP.GG</a> </h3>
+        <div style={{'width':'400px'}}>
+            <AutoComplete value={value} options={userList} placeholder="소환사명" name="username" onChange={changeName} style={{'width':'300px', 'float':'left'}} />
+            <Button type="button" onClick={submit_data} style={{'width':'80px'}}> 검색 </Button>
         </div>
         <br/>
         <h3>출력 결과 </h3>
-        <div style={{'width':'480px', 'height':'400px', 'overflow':'auto'}}>
-        <Table onChange={submit_data} columns={table_columns} dataSource={table_data?table_data:[]} pagination={{pageSize:5, padding:'20px', size:'small'}} style={{'width':'400px'}}/>
-        
+        <div style={{'width':'50%', 'height':'50%', 'overflow':'auto'}}>
+            <Table onChange={submit_data} columns={table_columns} dataSource={table_data?table_data:[]} pagination={{pageSize:5, padding:'20px', size:'small'}} style={{'width':'1000px'}}/>
         </div> 
 
     </div>);

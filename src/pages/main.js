@@ -36,7 +36,7 @@ function Main() {
                     
                     <Link to="winlose" className={`menu ${select[1]}`} onClick={menuselect}>승률계산</Link>
                     
-                    <Link to="findchamp" className={`menu ${select[2]}`} onClick={menuselect}>챔피언별 블루/레드 승률</Link>
+                    <Link to="findchamp" className={`menu ${select[2]}`} onClick={menuselect}>블루 VS 레드</Link>
                     
                     <Link to="stat" className={`menu ${select[3]}`} onClick={menuselect}>소환사 챔피언별 승률</Link>
                 </div>

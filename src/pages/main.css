@@ -8,7 +8,7 @@
 header{
     background-color: #4D5898;
     height: 95px;;
-    width: 100vw;  
+    width: 100%;  
 }
 
 
@@ -30,6 +30,7 @@ header{
 }
 
 .menus {
+    
     position: absolute;
     top: 33px;
     right:50px; 
@@ -51,7 +52,7 @@ header{
 }
 
 .menu:active, .menu.active{
-    color:#1862ab;
+    color:#7096ff;
 }
 
 
@@ -68,19 +69,7 @@ header{
     background-image: url('images/forest3.png');
     background-repeat: no-repeat;
     background-size: cover;
-    animation-duration: 3s;
-    animation-name: slidein;
-    @keyframes slidein {
-        from {
-          margin-left: 100%;
-          width: 300%
-        }
-      
-        to {
-          margin-left: 0%;
-          width: 100%;
-        }
-}}
+}
 
 /* home 메뉴 css */
 
@@ -94,6 +83,7 @@ header{
     font-family: Arial, Helvetica, sans-serif;   
 }
 
+/* 블루레드 css */
 
 .bluered h2 {
     font-family:sans-serif;
@@ -104,15 +94,25 @@ header{
 .rate{
     border-collapse: separate;
     border-spacing: 0 10px;
-    border: 1px solid black;
     border-collapse: collapse;
-    width:80%;
+    width:85%;
+    background-color: rgba(218, 224, 240, 0.7);
 }
 
-.rate th,td{
-    border: 1px solid black;
+.rate th{
+    border-bottom: 1px solid black;
+    padding:10px;
+    background-color:rgb(196, 196, 196, 0.5);
+    height: 60px;
 }
 
+.rate td{
+    margin-top:5px;
+    padding:3px;
+    height: 15px;
+    font-family: sans-serif;
+    color:rgb(49, 49, 49);
+}
 
 .blue[value]{
     -webkit-appearance: none;
@@ -132,6 +132,24 @@ header{
 .red[value]::-webkit-progress-value {
     background-color: rgb(230, 78, 78);
   }
+
+
+.ant-table-cell{
+    background-color: rgb(77, 88, 152,0.3);
+}
+
+.ant-table-content{
+    border: 1px solid #000000;
+    -webkit-border-radius: 4px;
+
+	  	-moz-border-radius: 4px;
+
+	  	border-radius: 4px;	
+
+}
+
+
+/* footer css */
 
 .footer {
     width: 100%;
