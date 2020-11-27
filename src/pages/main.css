@@ -72,6 +72,9 @@ header{
 }
 
 @media screen and (max-width:840px) { /*좁은 화면에서 */
+    header{
+        height:120px;
+    }
     .hid-button{
         display:block;
         right:50px;
@@ -85,8 +88,9 @@ header{
     }
     li>.menu.show{
         display:block;
-        top:140px;
+        top:180px;
     }
+
     }
 
 

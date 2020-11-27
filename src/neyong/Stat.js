@@ -3,6 +3,7 @@ import Axios from 'axios';
 import {Button, Table, AutoComplete } from 'antd';
 import 'antd/dist/antd.css';
 import 'pages/main.css'
+import './Stat.css'
 import {ChampData,array_en, array_kr, array_en_simple, array_kr_simple} from './ChampData.jsx';
 import {LinkOutlined, SearchOutlined} from '@ant-design/icons';
 import summoner from 'images/summoner.png'
@@ -107,7 +108,7 @@ function Stat(){
         </div>
         <br/>
         <h3>출력 결과 </h3>
-        <div style={{'width':'50%', 'height':'50%', 'overflow':'auto'}}>
+        <div style={{'width':'50%', 'height':'50%', 'overflow':'auto', 'minWidth':'300px'}}>
             <Table onChange={submit_data} columns={table_columns} dataSource={table_data?table_data:[]} pagination={{pageSize:8, padding:'20px', size:'small'}} style={{'width':'1000px'}}/>
         </div> 
 
