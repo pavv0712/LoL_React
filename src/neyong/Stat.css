@@ -1,0 +1,69 @@
+/*헤드라인 디자인 */
+h2 {
+    font-size:1.6em;
+    font-weight:bold;
+}
+h3{
+    font-size:1.4em !important;
+}
+
+/* 입력상자 스타일 */
+.searchbox-wrapper{
+    width:400px; 
+    position:center;
+}
+div.ant-select, div.ant-select *{
+    background:transparent;
+    width:310px;
+}
+div.ant-select-selector {
+    width:300px;
+    background-color:rgba(240,240,240,0.4) !important;
+}
+.rc-virtual-list,  .rc-virtual-list *{
+    background-color:rgba(250,250,250,0.6);
+    text-align:left;
+}
+
+.ant-select-selection-search-input{
+    float:left; 
+}
+
+.search-button{
+    background:rgba(240,240,240,0.6);
+}
+
+/* Antd table 스탯 */
+
+.ant-table, .and-table * {
+    background:transparent;
+    border:0px;
+}
+
+thead, thead *{
+    background:rgba(192,192,224,0.5) !important;
+}
+th {
+    font-weight:600 !important;
+}
+.ant-table-tbody *{
+    background:rgba(224,224,240,0.4);
+    border-color:grey !important;
+    border-collapse:collapse !important;
+    font-size:1em;
+    margin: -10px;
+}
+.ant-table-tbody tr{
+    height:1.3em;
+}
+
+
+.ant-pagination>li:not(.ant-pagination-item-active), .ant-pagination>li:not(.ant-pagination-item-active) *{
+    background:rgba(0,64,128,0.5) !important;
+    color:white !important;
+}
+
+td a{
+    background: transparent !important;
+    color:rgb(0,64,128);
+}
