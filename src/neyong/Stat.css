@@ -30,8 +30,8 @@ div.ant-select, div.ant-select *, div.ant-select-selector {
 
 /* Antd table 스탯 */
 
-.ant-table, .and-table * {
-    background:transparent;
+.ant-table, .and-table *, .ant-empty, .ant-empty-description {
+    background:rgba(224,224,240,0.4) !important;
     border:0px;
 }
 

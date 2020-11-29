@@ -41,6 +41,7 @@ function Main() {
       const togglemenu = () =>{  //autohidden 내용 변경
         console.log(document.querySelectorAll('.menu') )
         document.querySelectorAll('.menu') .forEach(v => {v.classList.toggle('show')}); //show 토글하기
+        document.querySelector('header').classList.toggle('show');
       }
 
    
