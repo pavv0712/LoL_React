@@ -18,20 +18,21 @@ header{
 #logo {
     position: absolute;
     top:21px;
-    left:50px;
+    left:70px;
     font-size: 30px;
 }
 #logo a{
     color:white;
     text-decoration: none;
     font-weight: bold;
-  
 }
 
 #logo a span {
-    padding: 5px;
+    font-size:35px;
+    padding: 3px;
+    font-family: 'IM Fell Double Pica SC', serif;
+      
 }
-
 
 /* 메뉴 css */
 

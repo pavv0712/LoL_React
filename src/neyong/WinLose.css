@@ -27,7 +27,6 @@
   
 }
 
-
 .gutter-row {
   margin-top:50px;
   padding:20px;
@@ -41,13 +40,24 @@
   
 }
 
+.blue:hover{
+  color:blue;
+}
+
+.red:hover {
+  color:red;
+}
+
+
 .champs{
   width:80%;
   border-radius: 10px;	
   background-color: rgba(194, 207, 241, 0.5);
   padding-bottom: 50px;
   padding-top:50px;
+  
 }
+
 
 .our_top_champ{
   margin-top: 30px;
@@ -125,6 +135,8 @@
   text-align: left;
   float: right;
 }
+
+
 .select-box{
   padding: 50px;
   float:left
@@ -138,29 +150,6 @@
   padding-bottom: 5px;
   border:1px solid rgb(95, 103, 153);
   border-radius: 10px;	
-  margin-left: 280px;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

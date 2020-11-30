@@ -1,6 +1,6 @@
 import './WinLose.css';
 import React, {useState} from 'react';
-import api from "pages/Api.js";
+import api from "pages/api.js";
 import calcu from 'images/calcu.png';
 
 // Antd
@@ -72,7 +72,7 @@ function WinLose() {
 
     return (
     <div className="App">
-        <div className="black-nav">
+        <div>
             <img src={calcu} width = '160'/>
         </div>
         <div className='textbox'>
@@ -98,19 +98,18 @@ function WinLose() {
                     option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
                 }
             >
-                <option value='100'>블루팀(Blue)</option>
-                <option value='200'>레드팀(Red)</option>
+                <option className='blue' value='100'>블루팀(Blue)</option>
+                <option className='red' value='200'>레드팀(Red)</option>
             </Select>
         </Col>
         </div>
         
         <div className='champs'>
-        <div>챔피언</div>
-        <div>소환사</div>
-        <div>챔피언</div>
+        <span>챔피언명</span>
+        <span>소환사명</span>
+        <span>상대챔피언명</span>
         <Row>
         <Col span={8} className="our_top_champ">
-            탑 챔피언
             <Select
                 showSearch
                 // value={result.first}
@@ -132,7 +131,6 @@ function WinLose() {
             </Select>
         </Col>
             <Col span={8} className="our_top_summoner">
-                탑 소환사 이름
                 <Select
                     showSearch
                     // value={result.first}
@@ -154,7 +152,7 @@ function WinLose() {
                 </Select>
             </Col>
             <Col span={8} className="counter_top_champ">
-                상대팀 탑 챔피언
+                탑 
                 <Select
                     showSearch
                     style={{ width: 200 }}
@@ -175,7 +173,7 @@ function WinLose() {
         </Row>
         <Row>
             <Col span={8} className="our_jungle_champ">
-                 정글 챔피언
+                
                 <Select
                     showSearch
                     style={{ width: 200 }}
@@ -194,7 +192,7 @@ function WinLose() {
                 </Select>
             </Col>
             <Col span={8} className="our_jungle_summoner">
-                정글 소환사 이름
+                
                 <Select
                     showSearch
                     // value={result.first}
@@ -215,7 +213,7 @@ function WinLose() {
 
                 </Select>            </Col>
             <Col span={8}className="counter_jungle_champ">
-                상대팀 정글 챔피언
+                 정글 
                 <Select
                     showSearch
                     style={{ width: 200 }}
@@ -236,7 +234,7 @@ function WinLose() {
         </Row>
         <Row>
             <Col span={8} className="our_middle_champ">
-                미드 챔피언
+                
                 <Select
                     showSearch
                     style={{ width: 200 }}
@@ -255,7 +253,7 @@ function WinLose() {
                 </Select>
             </Col>
             <Col span={8} className="our_middle_summoner">
-                미드 소환사 이름
+            
                 <Select
                     showSearch
                     // value={result.first}
@@ -276,7 +274,7 @@ function WinLose() {
 
                 </Select>            </Col>
             <Col span={8} className="counter_middle_champ">
-                상대팀 미드 챔피언
+                 미드 
                 <Select
                     showSearch
                     style={{ width: 200 }}
@@ -297,7 +295,7 @@ function WinLose() {
         </Row>
         <Row>
             <Col span={8} className="our_carry_champ">
-                원딜 챔피언
+                
                 <Select
                     showSearch
                     style={{ width: 200 }}
@@ -316,7 +314,7 @@ function WinLose() {
                 </Select>
             </Col>
             <Col span={8} className="our_carry_summoner">
-                원딜 소환사 이름
+                
                 <Select
                     showSearch
                     // value={result.first}
@@ -337,7 +335,7 @@ function WinLose() {
 
                 </Select>            </Col>
             <Col span={8} className="counter_carry_champ">
-                상대팀 원딜 챔피언
+                 원딜 
                 <Select
                     showSearch
                     style={{ width: 200 }}
@@ -358,7 +356,7 @@ function WinLose() {
         </Row>
         <Row>
             <Col span={8} className="our_support_champ">
-                서포터 챔피언
+                
                 <Select
                     showSearch
                     style={{ width: 200 }}
@@ -377,7 +375,7 @@ function WinLose() {
                 </Select>
             </Col>
             <Col span={8} className="our_support_summoner">
-                서포터 소환사 이름
+                
                 <Select
                     showSearch
                     // value={result.first}
@@ -398,7 +396,7 @@ function WinLose() {
 
                 </Select>            </Col>
             <Col span={8} className="counter_support_champ">
-                상대팀 서포터 챔피언
+                 서포터
                 <Select
                     showSearch
                     style={{ width: 200 }}
