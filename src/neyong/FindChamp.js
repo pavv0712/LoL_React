@@ -77,8 +77,9 @@ function FindChamp(){
                         <tr>
                                 <td></td>
                         </tr>
-                        {BlueRed.map((v) => {
-                            return (pos.indexOf(v.position.split(', ')[0])!==-1 || pos.indexOf(v.position.split(', ')[-1]) !==-1 ?
+                        {
+                        BlueRed.map((v) => {
+                            return (pos.indexOf(v.position.split(', ')[0])!==-1 || pos.indexOf(v.position.split(', ')[v.position.split(', ').length-1]) !==-1 ?
                                 <tr>       
                                     <td>{v.name}</td>
                                     
