@@ -1,6 +1,6 @@
 import './WinLose.css';
 import React, {useState} from 'react';
-import api from "pages/api";
+import api from "pages/Api.js";
 import calcu from 'images/calcu.png';
 
 // Antd
