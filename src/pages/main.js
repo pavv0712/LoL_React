@@ -2,13 +2,10 @@ import React from 'react'
 import './main.css';
 import { BrowserRouter,Link,Route} from 'react-router-dom';
 
-
 import Home from 'neyong/Home';
 import WinLose from 'neyong/WinLose';
 import FindChamp from 'neyong/FindChamp';
 import Stat from 'neyong/Stat';
-
-
 
 
 function Main() {
@@ -70,12 +67,11 @@ function Main() {
 
             <div className='content'>
                 <Route exact path="/" component={Home}/>
-                    <Route path="/winlose" component={WinLose}/>
-                    <Route path='/findchamp' component={FindChamp}/>
-                    <Route path='/stat' component={Stat}/>
-                    
+                <Route path="/winlose" component={WinLose}/>
+                <Route path='/findchamp' component={FindChamp}/>
+                <Route path='/stat' component={Stat}/>    
             </div>
-            <div class='footer'>
+            <div className='footer'>
                 <div>Copyright C 2020 by MaSuTer | All rights reserved</div>
 
             </div>

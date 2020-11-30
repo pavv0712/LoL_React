@@ -44,8 +44,9 @@ function FindChamp(){
     console.log(pos)
 
     return(
-
+        
         <div className='bluered'>
+            
             <img src={winrate1} width='270'/>
             <div id="position-selector">
                 <input type='checkbox' name='position' id='top' value='top' onChange={position} checked={booltop}/> 

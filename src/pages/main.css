@@ -50,6 +50,10 @@ header{
     text-align:center;
 }
 
+.menus>li{
+    text-align:center;
+}
+
 .menu{
     margin:20px;
     text-decoration: none;
@@ -73,7 +77,6 @@ header{
     position:absolute;
     background-color:rgba(0, 64, 128, 0.5);
 }
-
 
 @media screen and (max-width:840px) { /*좁은 화면에서 */
     header{
