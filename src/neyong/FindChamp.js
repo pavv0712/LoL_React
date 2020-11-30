@@ -49,24 +49,34 @@ function FindChamp(){
             
             <img src={winrate1} width='270'/>
             <div id="position-selector">
-                <input type='checkbox' name='position' id='top' value='top' onChange={position} checked={booltop}/> 
-                <label for='top'>탑</label>
-                <input type='checkbox' name='position' id='jungle' value='jungle' onChange={position} checked={booljungle}/> 
-                <label for='jungle'>정글러</label>
-                <input type='checkbox' name='position' id='mid' value='mid' onChange={position} checked={boolmid} /> 
-                <label for='mid'>미드</label>
-                <input type='checkbox' name='position' id='ad-carry' value='ad-carry' onChange={position} checked={booladcarry} /> 
-                <label for='ad-carry'>AD 캐리</label>
-                <input type='checkbox' name='position' id='support' value='support' onChange={position} checked={boolsupport}/>
-                <label for='support'>서포트</label>
+                <span>
+                    <input type='checkbox' name='position' id='top' value='top' onChange={position} checked={booltop}/> 
+                    <label for='top'>탑</label>
+                </span>
+                <span>
+                    <input type='checkbox' name='position' id='jungle' value='jungle' onChange={position} checked={booljungle}/> 
+                    <label for='jungle'>정글러</label>
+                </span>
+                <span>
+                    <input type='checkbox' name='position' id='mid' value='mid' onChange={position} checked={boolmid} /> 
+                    <label for='mid'>미드</label>
+                </span>
+                <span>
+                    <input type='checkbox' name='position' id='ad-carry' value='ad-carry' onChange={position} checked={booladcarry} /> 
+                    <label for='ad-carry'>AD 캐리</label>
+                </span>
+                <span>
+                    <input type='checkbox' name='position' id='support' value='support' onChange={position} checked={boolsupport}/>
+                    <label for='support'>서포트</label>
+                </span>
             </div>    
                 <table className='rate'>
                     <thead>
                         <tr>
                             <th>이름</th>
                             <th>포지션</th>
-                            <th colSpan='2'>블루</th>
-                            <th colSpan='2'>레드</th>
+                            <th colSpan='2' style={{'color':'rgb(95, 40, 240)'}}>블루</th>
+                            <th colSpan='2' style={{'color':' rgb(230, 78, 78)'}}>레드</th>
                         </tr>
                     </thead>
                     <tbody>

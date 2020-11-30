@@ -151,17 +151,35 @@ header{
 
 
 #position-selector{
-    padding-bottom:25px;
-
+    
+    width: 490px;
+    height: 40px;
+    background-color: rgb(97, 97, 231,0.4);
+    border-radius: 10px;
+    padding-top:10px;
+    margin-bottom:25px;
+    zoom:1.1
 }
+
+#position-selector label{
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(45, 23, 126);
+    font-weight: bold;
+    padding-left:8px;
+}
+
+#position-selector span{
+    padding: 20px;
+}
+
 
 .rate{
     border-collapse: separate;
     border-spacing: 0 10px;
     border-collapse: collapse;
-    width:1000px;
-    background-color: rgba(218, 224, 240, 0.7);
-    
+    width: 72%;
+    background-color: rgba(218, 224, 240, 0.7);    
 }
 
 .rate th{
@@ -169,7 +187,6 @@ header{
     border-bottom: 1px solid black;
     padding:10px;
     height: 60px;
-   
 }
 
 .rate td{
@@ -178,6 +195,7 @@ header{
     height: 15px;
     font-family: sans-serif;
     color:rgb(49, 49, 49);
+    
 }
 
 .blue[value]{

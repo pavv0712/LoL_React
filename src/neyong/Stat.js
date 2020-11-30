@@ -108,7 +108,7 @@ function Stat(){
         </div>
         <br/>
         <div style={{'width':'50%', 'height':'50%', 'overflow':'auto', 'minWidth':'300px'}}>
-            <Table onChange={submit_data} columns={table_columns} dataSource={table_data?table_data:[]} pagination={{pageSize:8, padding:'20px', size:'small'}} style={{'width':'1000px'}}/>
+            <Table onChange={submit_data} columns={table_columns} dataSource={table_data?table_data:[]} pagination={{pageSize:8, padding:'20px', size:'small'}} style={{'width':'100%'}}/>
         </div> 
 
     </div>);
