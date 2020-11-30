@@ -1,0 +1,158 @@
+/* 승률 계산 css */
+
+.textbox {
+  width:50%;
+  border-radius: 20px;	
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+}
+
+
+.backtext{
+  width:50%;
+  background-color: white;
+  padding: 10px;
+}
+
+
+.textsearch{
+  margin-left:85%;
+  color:white;
+  background-color: rgb(95, 103, 153);
+  width:15%;
+  padding-top:5px;
+  padding-bottom: 5px;
+  border:1px solid rgb(95, 103, 153);
+  border-radius: 10px;	
+  
+}
+
+
+.gutter-row {
+  margin-top:20px;
+}
+
+.champs{
+  width:70%;
+  border-radius: 10px;	
+  background-color: rgba(194, 207, 241, 0.5);
+  margin-top:50px;
+  padding-bottom: 50px;
+  padding-top:50px;
+}
+
+.our_top_champ{
+  margin-top: 30px;
+  text-align: left;
+  float: left;
+}
+.our_top_summoner{
+  margin-top: 30px;
+  text-align: left;
+  float: left;
+}
+.counter_top_champ{
+  margin-top: 30px;
+  text-align: left;
+  float: right;
+}
+.our_jungle_champ{
+  margin-top: 30px;
+  text-align: left;
+
+  float: left;
+}
+.our_jungle_summoner{
+  margin-top: 30px;
+  text-align: left;
+  float: left;
+}
+.counter_jungle_champ{
+  margin-top: 30px;
+  text-align: left;
+  float: right;
+}
+.our_middle_champ{
+  margin-top: 30px;
+  text-align: left;
+  float: left;
+}
+.our_middle_summoner{
+  margin-top: 30px;
+  text-align: left;
+  float: left;
+}
+.counter_middle_champ{
+  margin-top: 30px;
+  text-align: left;
+  float: right;
+}
+.our_carry_champ{
+  margin-top: 30px;
+  text-align: left;
+  float: left;
+}
+.our_carry_summoner{
+  margin-top: 30px;
+  text-align: left;
+  float: left;
+}
+.counter_carry_champ{
+  margin-top: 30px;
+  text-align: left;
+  float: right;
+}
+.our_support_champ{
+  margin-top: 30px;
+  text-align: left;
+  float: left;
+}
+.our_support_summoner{
+  margin-top: 30px;
+  text-align: left;
+  float: left;
+}
+.counter_support_champ{
+  margin-top: 30px;
+  text-align: left;
+  float: right;
+}
+.select-box{
+  padding: 50px;
+  float:left
+}
+
+.predict{
+  color:white;
+  background-color: rgb(95, 103, 153);
+  width:8%;
+  padding-top:5px;
+  padding-bottom: 5px;
+  border:1px solid rgb(95, 103, 153);
+  border-radius: 10px;	
+  margin-left: 280px;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

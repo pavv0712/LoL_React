@@ -21,9 +21,7 @@ function Home(){
                             이번게임의 승률을 알아 볼 수 있습니다!
                         </p>
                     </div>
-                </div>
-                
-                
+                </div>    
         </div>
     );
 };
