@@ -12,7 +12,6 @@ const GetURL = 'http://localhost:5000/'
 
 function Stat(){
 
-    const [result, setResult] = React.useState(Object()); //빈 오브젝트 생성
     const [userList, setUserList] = React.useState([]); // 빈 리스트 생성
     const [value, setValue] = React.useState('');
     const [table_data, setTableData] = React.useState([]); //테이블 데이터로 생성
@@ -24,12 +23,10 @@ function Stat(){
     const submit_data = () =>{
         var timerec = new Date().getTime(); //시간 추가
         setTableData([{key:0, champion:'데이터 로딩중'}]);
-        console.log(GetURL+'user/'+value);
         Axios.get(GetURL+'user/'+value)
         .then(res =>{ 
             const { data } = res;
-            console.log(data);
-            setResult(data);
+            // console.log(data);
             setUserList(x => { // 중복검색되지 않은 데이터만 나타나게...
                 let val_list =x.map( y => y['value']);
                 try{
@@ -44,9 +41,10 @@ function Stat(){
                 }
                 return x;
             }) // 성공시+리스트 부재시에 userlist 추가
-            let res_champ = {...result}; //하드카피
+            let res_champ = {...data}; //하드카피
             delete res_champ['time'] //time 정보는 삭제
-            result['time']? //테이블 정보 갱신. 
+            console.log(Object.entries(res_champ))
+            data['time']? //테이블 정보 갱신. 
                 setTableData(Object.entries(res_champ).map((val) => { //var i=0; ++i;
                 if (val && val[0]!=='time') {
                 var win_rate_val = Math.round( parseInt(val[1][0])*10000/( parseInt(val[1][0])+parseInt(val[1][1])))/100;
@@ -115,4 +113,5 @@ function Stat(){
 }
 
 export default Stat;
+
 

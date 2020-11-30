@@ -83,8 +83,11 @@ function WinLose() {
             소환사 검색
         </button>
         </div>
-        <Col className="gutter-row" span={6}>
+        <div className='teamselec'>
+        <Col className="gutter-row" span={10}>
+            <div>
             팀 선택
+            </div>
             <Select
                 showSearch
                 onChange={e=>setResult({...result, team_id:e})}
@@ -99,7 +102,12 @@ function WinLose() {
                 <option value='200'>레드팀(Red)</option>
             </Select>
         </Col>
+        </div>
+        
         <div className='champs'>
+        <div>챔피언</div>
+        <div>소환사</div>
+        <div>챔피언</div>
         <Row>
         <Col span={8} className="our_top_champ">
             탑 챔피언
@@ -410,7 +418,9 @@ function WinLose() {
             </Col>
         </Row>
         </div>
+        <div style ={{'height':'15p0px', 'width':'80%', 'background-color':'#4D5898'}}>
         <button className='predict' onClick={click}>승률 예측</button>
+        </div>
         {/*<Tooltip title="승률예측">*/}
         {/*    <Button type="primary" shape="circle" icon={<SearchOutlined />} />*/}
         {/*</Tooltip>*/}
