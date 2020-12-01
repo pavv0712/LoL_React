@@ -1,16 +1,31 @@
 import './WinLose.css';
 import React, {useState} from 'react';
-import api from "pages/api.js";
+import api from "pages/Api.js";
+import choteam from 'images/choteam.png';
 import calcu from 'images/calcu.png';
+import prediction from 'images/prediction.png'
 
 // Antd
 import 'antd/dist/antd.css';
 import { Row, Col } from 'antd';
 import { Select } from 'antd';
 import { Input } from 'antd';
+import { Modal, Button } from 'antd';
 
 function WinLose() {
+    const [isModalVisible, setIsModalVisible] = useState(false);
 
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
     const [user,setUser] = React.useState([]);
     const [champs, setChamps] = React.useState([]);
     const [summoners, setSummoners] = React.useState({
@@ -71,27 +86,50 @@ function WinLose() {
     const { Option } = Select;
 
     return (
+    <>
     <div className="App">
-        <div>
+        <span>
             <img src={calcu} width = '160'/>
-        </div>
+        </span>
+        <span>
+            <Button type="primary" onClick={showModal}>
+                ?
+            </Button>
+            <Modal
+            title="승률계산 사용법"
+            visible={isModalVisible}
+            onOk={handleOk}
+            onCancel={handleCancel}
+            style={{'font-weight':'bold', 'font-size':'25px','background-color':'rgb(95, 103, 153)'}}
+            >
+                <p>1. 입력창에 이번게임에 참가한 소환사들의 이름을 입력합니다.</p>
+                <p>2. 소환사 입력 버튼을 클릭 후 팀을 선택합니다.</p>
+                <p>3. 나의 팀 챔피언과 소환사명을 선택합니다.</p>
+                <p>4. 상대팀 챔피언을 선택 후 승률 계산을 클릭합니다</p>
+                <p>5. 이번 게임의 승률을 알아보고 게임을 즐깁니다..!</p>
+            </Modal>
+      </span>
         <div className='textbox'>
             <TextArea rows={7} placeholder="name님이 로비에 참가하셨습니다.... name2님이 로비에 참가하셨습니다. ..." onChange={e=>{setSummoners({input_text: e.target.innerHTML})}} />
         </div>
         <div className='backtext'>
         <button className='textsearch' onClick={click2}>
-            소환사 검색
+            소환사 입력
         </button>
         </div>
-        <div className='teamselec'>
-        <Col className="gutter-row" span={10}>
-            <div>
-            팀 선택
-            </div>
+        
+        <div style ={{'width':'50%'}}>
+            <img src={choteam} width='160' style={{'margin-top':'30px'}}/>
+        </div>
+        
+       
+        <div className='teamselec' style={{'float':'left'}}>
+         
+         <Col className="gutter-row" span={10}>
             <Select
                 showSearch
                 onChange={e=>setResult({...result, team_id:e})}
-                style={{ width: 200 }}
+                style={{ 'width': '100%' }}
                 placeholder="Select a team"
                 optionFilterProp="children"
                 filterOption={(input, option) =>
@@ -101,15 +139,30 @@ function WinLose() {
                 <option className='blue' value='100'>블루팀(Blue)</option>
                 <option className='red' value='200'>레드팀(Red)</option>
             </Select>
-        </Col>
+         </Col>
+    
+        </div>
+        <div style={{'width':'15%', 'height':'80px','margin-left':'75%'}}>
+                <button className='predict' onClick={click}>
+                    <span>승률예측</span>    
+                </button>
         </div>
         
+        
         <div className='champs'>
-        <span>챔피언명</span>
-        <span>소환사명</span>
-        <span>상대챔피언명</span>
+            <div style={{'width':'100%', 'font-size':'20px'}}>
+                <span className='champname'>챔피언명</span>
+                <span className='sumonname'>소환사명</span>
+                <span className='opchampname'>상대챔피언명</span>
+            </div>
+        
+        <div style={{'border-bottom':'2px solid rgb(50, 50, 126)'}}>
+        <div>
+            <div className='top'>
+                탑
+            </div>
         <Row>
-        <Col span={8} className="our_top_champ">
+        <Col span={8} className="our_top_champ">     
             <Select
                 showSearch
                 // value={result.first}
@@ -131,6 +184,7 @@ function WinLose() {
             </Select>
         </Col>
             <Col span={8} className="our_top_summoner">
+        
                 <Select
                     showSearch
                     // value={result.first}
@@ -152,7 +206,6 @@ function WinLose() {
                 </Select>
             </Col>
             <Col span={8} className="counter_top_champ">
-                탑 
                 <Select
                     showSearch
                     style={{ width: 200 }}
@@ -171,9 +224,17 @@ function WinLose() {
                 </Select>
             </Col>
         </Row>
+        </div>
+        </div>
+        
+        <div style={{'border-bottom':'2px solid rgb(50, 50, 126)'}}>
+        <div>
+            <div className='jungle'>
+                정글
+            </div>
         <Row>
             <Col span={8} className="our_jungle_champ">
-                
+            
                 <Select
                     showSearch
                     style={{ width: 200 }}
@@ -213,7 +274,7 @@ function WinLose() {
 
                 </Select>            </Col>
             <Col span={8}className="counter_jungle_champ">
-                 정글 
+                 
                 <Select
                     showSearch
                     style={{ width: 200 }}
@@ -232,8 +293,19 @@ function WinLose() {
                 </Select>
             </Col>
         </Row>
+        </div>
+        </div>
+
+
+        <div style={{'border-bottom':'2px solid rgb(50, 50, 126)'}}>
+        <div>
+            
+            <div className='mid'>
+            미드
+            </div>
         <Row>
             <Col span={8} className="our_middle_champ">
+            
                 
                 <Select
                     showSearch
@@ -274,7 +346,7 @@ function WinLose() {
 
                 </Select>            </Col>
             <Col span={8} className="counter_middle_champ">
-                 미드 
+                 
                 <Select
                     showSearch
                     style={{ width: 200 }}
@@ -293,9 +365,18 @@ function WinLose() {
                 </Select>
             </Col>
         </Row>
+        </div>
+        </div>
+
+
+        <div style={{'border-bottom':'2px solid rgb(50, 50, 126)'}}>
+            <div>
+                <div className='deal'>
+                원딜
+                </div>
         <Row>
             <Col span={8} className="our_carry_champ">
-                
+            
                 <Select
                     showSearch
                     style={{ width: 200 }}
@@ -335,7 +416,7 @@ function WinLose() {
 
                 </Select>            </Col>
             <Col span={8} className="counter_carry_champ">
-                 원딜 
+                 
                 <Select
                     showSearch
                     style={{ width: 200 }}
@@ -354,9 +435,18 @@ function WinLose() {
                 </Select>
             </Col>
         </Row>
+        </div>
+        </div>            
+        
+        <div style={{'border-bottom':'2px solid rgb(50, 50, 126)'}}>
+        
+        <div>
+            <div className='sup'>
+            서포터
+            </div>
+
         <Row>
             <Col span={8} className="our_support_champ">
-                
                 <Select
                     showSearch
                     style={{ width: 200 }}
@@ -396,7 +486,7 @@ function WinLose() {
 
                 </Select>            </Col>
             <Col span={8} className="counter_support_champ">
-                 서포터
+                 
                 <Select
                     showSearch
                     style={{ width: 200 }}
@@ -415,17 +505,20 @@ function WinLose() {
                 </Select>
             </Col>
         </Row>
+                </div>
+            </div>
         </div>
-        <div style ={{'height':'15p0px', 'width':'80%', 'background-color':'#4D5898'}}>
-        <button className='predict' onClick={click}>승률 예측</button>
-        </div>
+        
+        
         {/*<Tooltip title="승률예측">*/}
         {/*    <Button type="primary" shape="circle" icon={<SearchOutlined />} />*/}
         {/*</Tooltip>*/}
 
     </div>
-
+    </>
   );
+  
 }
+
 
 export default WinLose;
