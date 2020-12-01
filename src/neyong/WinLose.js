@@ -3,7 +3,6 @@ import React, {useState} from 'react';
 import api from "pages/Api.js";
 import choteam from 'images/choteam.png';
 import calcu from 'images/calcu.png';
-import prediction from 'images/prediction.png'
 
 // Antd
 import 'antd/dist/antd.css';
