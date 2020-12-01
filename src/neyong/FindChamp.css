@@ -1,0 +1,99 @@
+/* 블루레드 css */
+h3:nth-of-type(2){
+    margin-top:10px;
+}
+
+#position-selector, #sort-selector{
+    width: min(490px, 100%);
+    background-color: rgb(97, 97, 231,0.4);
+    border-radius: 10px;
+    padding-top:10px;
+    margin-bottom:25px;
+    zoom:1.1
+}
+#position-selector {
+    height: 160px;
+}
+
+#position-selector-container, #sort-selector-container{
+    display:flex;
+    flex-wrap:wrap;
+    min-width:300px;
+}
+
+
+#position-selector label{
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(45, 23, 126);
+    font-weight: bold;
+    padding-left:8px;
+}
+
+
+.rate{
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    border-collapse: collapse;
+    width: 72%;
+    background-color: rgba(218, 224, 240, 0.7);    
+}
+
+.rate th{
+    color:rgb(50, 50, 126);
+    border-bottom: 1px solid black;
+    padding:10px;
+    height: 60px;
+}
+
+.rate td{
+    margin-top:5px;
+    padding:3px;
+    height: 15px;
+    font-family: sans-serif;
+    color:rgb(49, 49, 49);
+    
+}
+
+.blue[value]{
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.blue[value]::-webkit-progress-value {
+    background-color: rgb(97, 97, 231);
+  }
+
+
+.red[value]{
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.red[value]::-webkit-progress-value {
+    background-color: rgb(230, 78, 78);
+  }
+
+/*ant-table 디자인 */
+  .ant-table-thead th{
+    color:rgb(50, 50, 126);
+    border-bottom: 1px solid black !important;
+    padding:10px;
+    height: 60px;
+}
+.title-blue{
+    color:rgb(95, 40, 240) !important;
+}
+.title-red{
+    color:rgb(230, 78, 78) !important;
+}
+.ant-table-row:hover{
+    background-color:rgba(220,220,240,0.7) !important;
+}
+.ant-pagination>li:not(.ant-pagination-item-active), .ant-pagination>li:not(.ant-pagination-item-active) *{
+    background:rgba(0,64,128,0.5) !important;
+    color:white !important;
+}
+.ant-empty, .ant-empty *, p.ant-empty-description{
+    background:transparent !important;
+}

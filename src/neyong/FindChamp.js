@@ -2,6 +2,8 @@ import React from 'react';
 import 'pages/main.css';
 import winrate1 from 'images/winrate1.png'
 import BlueRed from './BlueRed.json';
+import 'neyong/FindChamp.css'
+import {Button, Table, AutoComplete } from 'antd';
 
 function FindChamp(){
     const [pos, setPos] = React.useState(['탑', '정글러', '미드', 'AD 캐리', '서포트'])
@@ -10,6 +12,29 @@ function FindChamp(){
     const [boolmid, setBoolmid] = React.useState(true);
     const [booladcarry, setBooladcarry] = React.useState(true);
     const [boolsupport, setBoolsupport] = React.useState(true);
+
+    const sortBy = (attr) => { // 정렬된 리스트 출력
+        let attrlist = BlueRed.map(v=>v[attr]) // 정렬 안 된 리스트
+        let attrsort = [...attrlist].sort() // 정렬된 리스트
+        if (attr === 'Blue' || attr ==='Red') { attrsort.reverse() }
+        var res = []
+        var tmp = 0
+        for (var idx =0; idx<152; idx++){
+            var v = attrsort[idx]
+            if (idx>0 && v === attrsort[idx-1] ){
+                tmp = attrlist.indexOf(v, tmp+1)
+                res.push(BlueRed[tmp])
+            }
+            else {
+                tmp = attrlist.indexOf(v)
+                res.push(BlueRed[tmp])
+            }
+
+        }
+        return res; // 
+
+    }
+    const [sortres, setSortRes] = React.useState(sortBy('name')); //정렬 기준. 
 
     const position = (e) => {
         if(e.target.value === 'top'){
@@ -37,85 +62,94 @@ function FindChamp(){
             setBoolsupport(!boolsupport)
             setPos([...pos.slice(0,4), supval])
         }
-        console.log(pos)
+       
 
     }
     
-    console.log(pos)
+    const sorting = (e) =>{ //기준에 따라 sorting
+        if (Object.keys(BlueRed[0]).indexOf(e.target.value) !==-1){
+            setSortRes(sortBy(e.target.value)); //
+        }
+    }
+
+    const render_graph = (val, teamcolor) => {
+        return (<div style={{'display':'flex', 'flex-wrap':'wrap'}}>
+                    <div style={{'width':'60%', 'margin':'0px 10px', 'padding':'10px 0px'}}>
+                        <progress style= {{'width':'100%', 'minWidth':'60px', 'margin':'0px'}} className={teamcolor} value={val} max='100'/>
+                    </div>
+                <div style={{'margin':'10px', 'textAlign':'center'}}>{val}%</div>
+                </div>)
+    }
+
+    const table_columns = [
+        {title:'이름', dataIndex:'name', align:'center', width:'14%', maxWidth:'9em'}, 
+        {title:'포지션', dataIndex:'position', align:'center', width:'16%', maxWidth:'10em'}, 
+        {title:'블루', dataIndex:'bluewin',align:'center', className:'title-blue', render:(val)=>(render_graph(val, 'blue'))  }, 
+        {title:'레드', dataIndex:'redwin',align:'center', className:'title-red', render:(val)=>(render_graph(val, 'red'))}
+    ]
+
+    let data_filter = sortres.filter(v=> (pos.indexOf(v.position.split(', ')[0])!==-1 || 
+    pos.indexOf(v.position.split(', ')[v.position.split(', ').length-1]) !==-1))
+    let table_data = data_filter.map(v=>(
+            {key:data_filter.indexOf(v), name:v.name, position:v.position, bluewin:v.Blue, redwin:v.Red }
+            ))
+
 
     return(
         
         <div className='bluered'>
-            
-            <img src={winrate1} width='270'/>
-            <div id="position-selector">
-                <span>
+        <img src={winrate1} width='270'/>
+        <div id="position-selector">
+            <h3>포지션 선택 </h3>
+            <div id='position-selector-container'>
+                <div>
                     <input type='checkbox' name='position' id='top' value='top' onChange={position} checked={booltop}/> 
                     <label for='top'>탑</label>
-                </span>
-                <span>
+                </div>
+                <div>
                     <input type='checkbox' name='position' id='jungle' value='jungle' onChange={position} checked={booljungle}/> 
                     <label for='jungle'>정글러</label>
-                </span>
-                <span>
+                </div>
+                <div>
                     <input type='checkbox' name='position' id='mid' value='mid' onChange={position} checked={boolmid} /> 
                     <label for='mid'>미드</label>
-                </span>
-                <span>
+                </div>
+                <div>
                     <input type='checkbox' name='position' id='ad-carry' value='ad-carry' onChange={position} checked={booladcarry} /> 
                     <label for='ad-carry'>AD 캐리</label>
-                </span>
-                <span>
+                </div>
+                <div>
                     <input type='checkbox' name='position' id='support' value='support' onChange={position} checked={boolsupport}/>
                     <label for='support'>서포트</label>
-                </span>
-            </div>    
-                <table className='rate'>
-                    <thead>
-                        <tr>
-                            <th>이름</th>
-                            <th>포지션</th>
-                            <th colSpan='2' style={{'color':'rgb(95, 40, 240)'}}>블루</th>
-                            <th colSpan='2' style={{'color':' rgb(230, 78, 78)'}}>레드</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                                <td></td>
-                        </tr>
-                        <tr>
-                                <td></td>
-                        </tr>
-                        {BlueRed.map((v) => {
-                            return (pos.indexOf(v.position.split(', ')[0])!==-1 || pos.indexOf(v.position.split(', ')[v.position.split(', ').length-1]) !==-1 ?
-                                <tr>       
-                                    <td>{v.name}</td>
-                                    
-                                    <td>{v.position}</td>
-                                    <td>
-                                        <progress className='blue' value={v.Blue} max='100'/>
-                                    </td>
-                                    <td>{v.Blue}%</td>
-                                    
-                                    <td>
-                                        <progress className='red' value={v.Red} max='100'/>
-                                    </td>
-                                    <td>{v.Red}%</td>
-                                </tr>
-                                
-                                :''
-                        )})}
-                        <tr>
-                            <td colSpan='6'></td>
-                        </tr>
-                        <tr style={{'height':'60px','border-top':'1px solid white', 'background-color':'rgba(193, 173, 212, 0.5)'}}>
-                            <td colSpan='6'></td>
-                        </tr>
-                    </tbody>
-                </table>
-                
+                </div>
+            </div>
+        
+            <h3>챔피언 정렬 기준</h3>
+            <div id='sort-selector-container'>
+                <div>
+                    <input type='radio' name='sort' id='k_name' value='name' onChange={sorting} defaultChecked/> 
+                    <label for='k_name'>한글 이름</label>
+                </div>
+                <div>
+                    <input type='radio' name='sort' id='e_name' value='e_name' onChange={sorting} /> 
+                    <label for='e_name'>영어 이름</label>
+                </div>
+                <div>
+                    <input type='radio' name='sort' id='bluewin' value='Blue' onChange={sorting}  /> 
+                    <label for='bluewin'>블루 승률</label>
+                </div>
+                <div>
+                    <input type='radio' name='sort' id='redwin' value='Red' onChange={sorting} /> 
+                    <label for='redwin'>레드 승률</label>
+                  </div>
+            </div>
         </div>
-                    
+            <Table className='rate' columns={table_columns} size='small'
+            dataSource={table_data} pagination={{padding:'10px', size:'small', 
+            showTotal:(total) => (`${total} 챔피언`), pageSizeOptions:[10,20,50,100]}} 
+            style={{'width':'80%', 'minWidth':'400px', 'background':'transparent'}}/>      
+            
+    </div>
     );
 };
 
