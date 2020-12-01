@@ -1,6 +1,6 @@
 import './WinLose.css';
 import React, {useState} from 'react';
-import api from "pages/Api.js";
+import Api from "pages/api.js";
 import choteam from 'images/choteam.png';
 import calcu from 'images/calcu.png';
 
@@ -58,12 +58,12 @@ function WinLose() {
 
     const { TextArea } = Input;
     const click=()=>{
-        api.post('InputData/',{...result,...summoner,...teamId})
+        Api.post('InputData/',{...result,...summoner,...teamId})
     }
     const click2=()=>{
         console.log(summoners.input_text)
         let tmp = summoners.input_text.split('님이 로비에 참가하셨습니다.\n');
-        api.post('SummonerData/',{
+        Api.post('SummonerData/',{
             summoner1:tmp[0],
             summoner2:tmp[1],
             summoner3:tmp[2],
@@ -75,7 +75,7 @@ function WinLose() {
     }
 
     React.useEffect(()=>{
-        api.get('Champ').then((data)=>{
+        Api.get('Champ').then((data)=>{
             console.log(data.data.results)
 
             setChamps(data.data.results);

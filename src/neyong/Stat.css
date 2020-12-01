@@ -9,7 +9,12 @@ h3{
 
 /* 입력상자 스타일 */
 .searchbox-wrapper{
-    position:center;
+    position:relative;
+    top:50px;
+}
+.table-wrapper{
+    position:relative;
+    top:60px;
 }
 div.ant-select, div.ant-select *, div.ant-select-selector {
     background-color:rgba(240,240,240,0.8) !important;
@@ -21,6 +26,7 @@ div.ant-select, div.ant-select *, div.ant-select-selector {
 
 .ant-select-selection-search-input{
     float:left; 
+    font-weight:600;
 }
 
 .ant-btn-button{
@@ -71,4 +77,8 @@ tbody, .ant-table-tbody *{
 td a{
     background: transparent !important;
     color:rgb(0,64,128);
+}
+
+.ant-table-row:hover{
+    background-color:rgba(200,200,240,0.6) !important;
 }

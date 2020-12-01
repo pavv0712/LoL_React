@@ -3,9 +3,22 @@ import 'pages/main.css';
 import winrate1 from 'images/winrate1.png'
 import BlueRed from './BlueRed.json';
 import 'neyong/FindChamp.css'
-import {Button, Table, AutoComplete } from 'antd';
+import {Button, Table, Modal } from 'antd';
 
 function FindChamp(){
+    const [isModalVisible, setIsModalVisible] = React.useState(false);
+
+    const showModal = () => {
+        setIsModalVisible(true);
+    };
+
+    const handleOk = () => {
+        setIsModalVisible(false);
+     };
+
+    const handleCancel = () => {
+        setIsModalVisible(false);
+    };
     const [pos, setPos] = React.useState(['탑', '정글러', '미드', 'AD 캐리', '서포트'])
     const [booltop, setBooltop] = React.useState(true);
     const [booljungle, setBooljungle] = React.useState(true);
@@ -34,7 +47,8 @@ function FindChamp(){
         return res; // 
 
     }
-    const [sortres, setSortRes] = React.useState(sortBy('name')); //정렬 기준. 
+    const defaultsort = sortBy('name')
+    const [sortres, setSortRes] = React.useState(defaultsort); //정렬 기준. 
 
     const position = (e) => {
         if(e.target.value === 'top'){
@@ -99,6 +113,20 @@ function FindChamp(){
         
         <div className='bluered'>
         <img src={winrate1} width='270'/>
+        
+        <Button type="primary" onClick={showModal}>?</Button>
+            <Modal
+            title="챔피언 승률차 사용법"
+            visible={isModalVisible}
+            onOk={handleOk}
+            onCancel={handleCancel}
+            style={{'font-weight':'bold', 'font-size':'25px','background-color':'rgb(95, 103, 153)'}}
+            >
+                <p>1. League of Data에서 가져온 승률 정보입니다.</p>
+                <p>2. 포지션을 선택한 뒤 포지션에 사용되는 챔피언을 검색할 수 있습니다.</p>
+                <p>3. 기본적으로 한글 이름 순서로 정렬되어 있지만 영어 이름, 블루 팀 승률, 레드 팀 승률 순서로도 정렬 가능합니다.</p>
+                <p>4. 사용자 편의성을 위해 10개씩, 20개씩, 50개씩, 100개씩 데이터를 나누어서 볼 수 있습니다.</p>
+        </Modal> 
         <div id="position-selector">
             <h3>포지션 선택 </h3>
             <div id='position-selector-container'>

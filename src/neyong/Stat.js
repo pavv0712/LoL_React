@@ -1,6 +1,6 @@
 import React from 'react';
 import Axios from 'axios';
-import {Button, Table, AutoComplete } from 'antd';
+import {Button, Table, AutoComplete, Modal } from 'antd';
 import 'antd/dist/antd.css';
 import 'pages/main.css'
 import './Stat.css'
@@ -11,6 +11,19 @@ import summoner from 'images/summoner.png'
 const GetURL = 'http://localhost:5000/'
 
 function Stat(){
+    const [isModalVisible, setIsModalVisible] = React.useState(false);
+
+    const showModal = () => {
+        setIsModalVisible(true);
+    };
+
+    const handleOk = () => {
+        setIsModalVisible(false);
+     };
+
+    const handleCancel = () => {
+        setIsModalVisible(false);
+    };
 
     const [userList, setUserList] = React.useState([]); // 빈 리스트 생성
     const [value, setValue] = React.useState('');
@@ -88,25 +101,38 @@ function Stat(){
     }
 
     const table_columns = [ 
-        {title:'챔피언 이름', dataIndex:'champion', 
+        {title:'챔피언 이름', dataIndex:'champion', align:'center',
         render: (text)=> (champ_name_link(text)) 
         }, 
-        {title:'승리', dataIndex:'win'}, 
-        {title:'패배', dataIndex:'lost'}, 
-        {title:'승률', dataIndex:'win_rate'}
+        {title:'승리', dataIndex:'win', align:'center'}, 
+        {title:'패배', dataIndex:'lost', align:'center'}, 
+        {title:'승률', dataIndex:'win_rate', align:'center'}
     ]
 
     
     return (<div>
         <img src={summoner} width='300'/>
+            <Button type="primary" onClick={showModal} style={{'marginLeft':'20px'}}>?</Button>
+                <Modal
+                title="소환사 승률 안내"
+                visible={isModalVisible}
+                onOk={handleOk}
+                onCancel={handleCancel}
+                style={{'font-weight':'bold', 'font-size':'25px','background-color':'rgb(95, 103, 153)'}}
+                >
+                <p>1. 검색하고 싶은 소환사 이름을 입력하면 OP.GG에서 2020년 시즌의 사용 챔피언별 승, 패, 승률 가져옵니다.</p>
+                <p>2. 이미 검색한 적이 있는 소환사는 조회 목록에 저장됩니다.</p>
+                <p>3. 각 챔피언의 링크는 OP.GG의 챔피언별 전적에 연결됩니다.</p>
+            </Modal> 
             <h3>참조 : <a href="https://op.gg/champion/"><LinkOutlined/> OP.GG</a> </h3>
-        <div style={{'width':'400px'}}>
-            <AutoComplete value={value} options={userList} placeholder="소환사명" name="username" onChange={changeName} style={{'width':'300px', 'float':'left'}} />
+        <div className='searchbox-wrapper' style={{'width':'340px'}}>
+            <AutoComplete value={value} options={userList} placeholder="소환사명" name="username" onChange={changeName} style={{'width':'240px', 'float':'left'}} />
             <Button type="button" onClick={submit_data} style={{'width':'80px'}}> <SearchOutlined/> </Button>
         </div>
         <br/>
-        <div style={{'width':'50%', 'height':'50%', 'overflow':'auto', 'minWidth':'300px'}}>
-            <Table onChange={submit_data} columns={table_columns} dataSource={table_data?table_data:[]} pagination={{pageSize:8, padding:'20px', size:'small'}} style={{'width':'100%'}}/>
+        <div className='table-wrapper' style={{'width':'70%', 'minWidth':'300px'}}>
+            <Table onChange={submit_data} columns={table_columns} dataSource={table_data?table_data:[]}  style={{'width':'100%'}}
+            pagination={{padding:'20px', size:'small', showTotal:(total) => (`${total} 챔피언`), }}/>
         </div> 
 
     </div>);

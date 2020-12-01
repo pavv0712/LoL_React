@@ -3,7 +3,7 @@ from flask_cors import CORS
 import requests
 from urllib import parse
 from bs4 import BeautifulSoup
-from lxml import etree, html
+#from lxml import etree, html
 import json, time, os
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
